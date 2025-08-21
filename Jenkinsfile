@@ -14,11 +14,18 @@ pipeline {
            echo "This is a DEPLOY stage."
          }
        }
-
-         stage ('TEST')
+      stage ('Parellel')
+         stage ('TEST 1')
        {
          steps {
-           echo "This is a TEST stage."
+           echo "This is a TEST 1 stage."
+         }
+       }
+
+         stage ('TEST 2')
+       {
+         steps {
+           echo "This is a TEST 2 stage."
          }
        }
          
