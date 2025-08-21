@@ -14,7 +14,7 @@ pipeline {
            echo "This is a DEPLOY stage."
          }
        }
-      stage ('Parellel test')
+      stage ('Parellel test') {
         parallel
          stage ('TEST 1')
        {
@@ -29,7 +29,7 @@ pipeline {
            echo "This is a TEST 2 stage."
          }
        }
-         
+      } 
      }
   
 
