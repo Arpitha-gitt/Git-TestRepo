@@ -1,10 +1,14 @@
 pipeline {
     agent any;
+    environment
+    {
+        NAME = 'Arpitha'
      stages {
        stage ('BUILD')
        {
          steps {
            echo "This is a build stage."
+            echo "$NAME"
          }
        }
 
@@ -19,7 +23,7 @@ pipeline {
          stage ('TEST 1')
        {
          steps {
-           echo "This is a TEST 1 stage."
+           echo "This is a TEST 1 stage $NAME"
          }
        }
 
@@ -32,6 +36,6 @@ pipeline {
       } 
       }
      }
-  
+    }
 
 }
